@@ -9,8 +9,8 @@ if(empty($page)){
 }
 
 if(isset($_POST['word'])){
-    $session['word'][$page-1] = filter_input(INPUT_POST,'word', FILTER_SANITIZE_STRING);
-    var_dump($session);
+    $_SESSION['word'][$page-1] = filter_input(INPUT_POST,'word', FILTER_SANITIZE_STRING);
+    // var_dump($_SESSION);
 
 }
 
@@ -23,7 +23,7 @@ include 'inc/header.php';
 
 echo "<h1>Step $page of $total</h1>";
 
-echo '<form method="post" action="play.php?p="'. ($page+1) . '">';
+echo '<form method="post" action="play.php?p='. ($page+1) . '">';
 echo '<div class="form-group form-group-lg">';
 
 switch ($page) {
