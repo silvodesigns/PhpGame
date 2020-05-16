@@ -5,6 +5,7 @@ $total = 5;
 $page = filter_input(INPUT_GET,'p', FILTER_SANITIZE_NUMBER_INT);
 //if the form data is empty lets assign the value of 1 to page
 if(empty($page)){
+    session_destroy();
     $page = 1;
 }
 
