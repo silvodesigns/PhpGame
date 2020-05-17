@@ -11,7 +11,7 @@ if(isset($_GET['save'])){
     header('location: /story.php');
     exit;
 
-} else if(isset($_GET['detele'])){
+} else if(isset($_GET['delete'])){
     setcookie($_GET['delete'], '', time() - 3600, '/');
 }
 
